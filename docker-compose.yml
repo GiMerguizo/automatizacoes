@@ -1,0 +1,48 @@
+version: "3.9"
+
+networks:
+  app_network:
+
+volumes:
+  pgdata:
+  prometheus_data:
+  grafana_data:
+
+services:
+  postgres_db:
+    image: postgres:15.8
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - app_network
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  prometheus_app:
+    image: prom/prometheus:latest
+    container_name: prometheus_app
+    restart: always
+    ports:
+      - "9090:9090"
+    networks:
+      - app_network
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+
+  grafana_app:
+    image: grafana/grafana:latest
+    container_name: grafana_app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus_app
+    networks:
+      - app_network
+    volumes:
+      - grafana_data:/var/lib/grafana

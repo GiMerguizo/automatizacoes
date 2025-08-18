@@ -1,5 +1,4 @@
 #!/bin/sh
-# This is a comment!
 
 # Add Docker's official GPG key:
 echo "Atualizando os pacotes do sistema..."
