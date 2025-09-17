@@ -3,7 +3,7 @@
 # Add Docker's official GPG key:
 echo "Atualizando os pacotes do sistema..."
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get install -y ca-certificates curl
 
 echo "Adicionando chave"
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -27,10 +27,8 @@ echo "Docker version"
 sudo docker version
 
 echo "Alterando as permissões do Docker para os comandos docker"
-# sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 
-docker version
+echo "Para usar o Docker sem sudo, faça logout/login ou execute: newgrp docker"
 echo "Docker instalado com sucesso!"
 # End of install-docker.sh

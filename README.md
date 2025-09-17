@@ -1,7 +1,9 @@
-# Automatizando instalações
+# Monitoração Zabbix + Grafana
+_Última atualização: 17/09/2025_
+Essa aplicação consiste em uma monitoração com Zabbix integrado ao Grafana subindo de forma automatizada através do docker compose. <br>
 
 ## 📌 Requisitos
-- Ambiente Linux (testado em Ubuntu/Debian)
+- Servidor Linux (testado em Ubuntu/Debian)
 
 ## 🐋 Install Docker
 - Baixar o script em algum diretório `install-docker.sh`
