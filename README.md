@@ -35,3 +35,4 @@ docker compose up -d
 
 ## 📝 Referências
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Integrando Zabbix e Grafana](https://medium.com/zabbix-brasil/integrando-zabbix-e-grafana-d46de4d1526d)
