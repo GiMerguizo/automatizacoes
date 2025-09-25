@@ -1,6 +1,5 @@
 # Monitoração Zabbix + Grafana
-_Última atualização: 17/09/2025_
-Essa aplicação consiste em uma monitoração com Zabbix integrado ao Grafana subindo de forma automatizada através do docker compose. <br>
+Essa aplicação consiste em uma monitoração com Zabbix integrado ao Grafana subindo de forma automatizada através do docker compose. - _Última atualização: 17/09/2025_ <br>
 
 ## 📌 Requisitos
 - Servidor Linux (testado em Ubuntu/Debian)
